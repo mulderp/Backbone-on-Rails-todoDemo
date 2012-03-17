@@ -1,0 +1,16 @@
+== Overview
+
+This is a demo application for illustrating some design principle for a backbone application
+
+Some references:
+
+The backbone-on-rails gem is based on the Backbone.js on Rails book from thoughtbot, which is a good introduction to Backbone-on-Rails:
+https://workshops.thoughtbot.com/backbone-js-on-rails
+
+And a couple of Railscasts cover the building of a single page app with the gem:
+http://railscasts.com/episodes/323-backbone-on-rails-part-1
+http://railscasts.com/episodes/325-backbone-on-rails-part-2
+
+Other Todo application in Backbone can be found here:
+http://documentcloud.github.com/backbone/docs/todos.html
+https://github.com/addyosmani/todomvc
