@@ -1,0 +1,12 @@
+<div id="create-todo">
+  <%= text_field_tag "empty", "new todo" %>
+</div>
+
+
+<div id="todo-list">
+  <ul>
+  <% @todo_list.each do |todo| %>
+    <li class="todo"><%= todo.content %></li>
+  <% end %>    
+  </ul>
+</div>
