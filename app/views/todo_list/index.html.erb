@@ -5,7 +5,7 @@
 
 <div id="todo-list">
   <ul>
-  <% @todo_list.each do |todo| %>
+  <% @todo_list.todos.each do |todo| %>
     <li class="todo"><%= todo.content %></li>
   <% end %>    
   </ul>

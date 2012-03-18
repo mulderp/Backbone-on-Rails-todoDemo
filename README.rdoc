@@ -14,3 +14,11 @@ http://railscasts.com/episodes/325-backbone-on-rails-part-2
 Other Todo application in Backbone can be found here:
 http://documentcloud.github.com/backbone/docs/todos.html
 https://github.com/addyosmani/todomvc
+
+== JSON from the Rails application
+JSON can be obtained from any Ruby hash, however, by careful to do the correction right. In a Ruby Hash "=>" is easily slipping into your JSON, that requires the ":"
+
+JSON can be fetched from the application by using cURL as follows:
+
+ curl -H "Accept: application/json" 0.0.0.0:3001/todolist.json
+
