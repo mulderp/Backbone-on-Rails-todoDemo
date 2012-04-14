@@ -3,7 +3,9 @@ window.BackboneOnRailsTodo =
   Collections: {}
   Views: {}
   Routers: {}
-  init: {}
+  init: ->
+          new BackboneOnRailsTodo.Routers.Todos
+          Backbone.history.start()
 
 $(document).ready ->
   BackboneOnRailsTodo.init()
