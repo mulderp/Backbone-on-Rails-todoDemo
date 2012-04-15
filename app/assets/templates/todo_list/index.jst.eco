@@ -1,0 +1,5 @@
+<ul>
+  <% for todo in @todo_list.models: %>
+    <li><%= todo.get('content') %></li>
+  <% end %>
+</ul>
