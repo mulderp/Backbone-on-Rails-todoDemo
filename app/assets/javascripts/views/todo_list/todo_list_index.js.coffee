@@ -1,19 +1,20 @@
 class BackboneOnRailsTodo.Views.TodoListIndex extends Backbone.View
 
-  template: JST['todo_list/index']
+  el: $('#todo-list')
 
   events:
     'submit #new-todo': 'createTodo'
 
   initialize: ->
-    @collection.on('reset', @render, this)
+    @collection.on('reset', @addAll, this)
 
+  addAll: ->
+    @collection.each(@addOne)
 
-  render: ->
-    $(@el).html(@template(todo_list: @collection))
-    this
+  addOne: (todo) ->
+    view = new BackboneOnRailsTodo.Views.TodosIndex({model: todo})
+    this.$("#todo-list").append(view.render().el)
   
   createTodo: (event) ->
     event.preventDefault()
-    todo = new BackboneOnRailsTodo.Collections.Todos()
-    todo.create content: $('#new-todo-content').val()
+    BackboneOnRailsTodo.Collections.Todos.create content: $('#new-todo-content').val()
