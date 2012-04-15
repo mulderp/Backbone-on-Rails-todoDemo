@@ -1,4 +1,4 @@
-class BackboneOnRailsTodo.Views.TodosIndex extends Backbone.View
+class BackboneOnRailsTodo.Views.Todo extends Backbone.View
 
   tagName: 'li'
 
