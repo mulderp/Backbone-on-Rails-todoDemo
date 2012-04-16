@@ -26,4 +26,4 @@ class BackboneOnRailsTodo.Views.TodoListIndex extends Backbone.View
     console.log(e.data.collection)
 
     e.data.collection.create content: this.value
-    ''
+    this.value = ''
