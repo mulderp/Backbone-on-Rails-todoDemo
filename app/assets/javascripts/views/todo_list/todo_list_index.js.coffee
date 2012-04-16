@@ -4,15 +4,16 @@ class BackboneOnRailsTodo.Views.TodoListIndex extends Backbone.View
 
   initialize: ->
     @collection.on('reset', @addAll, this)
-    @collection.bind('all', this.render, this)
-    $('#new-todo').on "keypress", @keyTodoInput
+    @collection.on('add', this.addOne, this)
+    $('#new-todo').on "keypress", {collection: @collection}, @keyTodoInput
 
   addAll: ->
     @collection.each(@addOne)
 
   addOne: (todo) ->
+    console.log(todo)
     view = new BackboneOnRailsTodo.Views.Todo({model: todo})
-    this.$("#todo-list").append(view.render().el)
+    $("#todo-list").append(view.render().el)
   
   createTodo: (event) ->
     event.preventDefault()
@@ -22,7 +23,7 @@ class BackboneOnRailsTodo.Views.TodoListIndex extends Backbone.View
     # console.log(event.type, event.keyCode)
     return if (e.keyCode != 13)
     return if (!this.value)
+    console.log(e.data.collection)
 
-    todo = new BackboneOnRailsTodo.Collections.Todos()
-    todo.create content: this.value
+    e.data.collection.create content: this.value
     ''
