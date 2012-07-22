@@ -4,7 +4,7 @@ window.BackboneOnRailsTodo =
   Views: {}
   Routers: {}
   init: ->
-    new BackboneOnRailsTodo.Routers.TodoLists
+    new BackboneOnRailsTodo.Routers.TodoApp
     Backbone.history.start()
 
 $(document).ready ->

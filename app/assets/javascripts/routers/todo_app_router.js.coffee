@@ -1,4 +1,4 @@
-class BackboneOnRailsTodo.Routers.TodoLists extends Backbone.Router
+class BackboneOnRailsTodo.Routers.TodoApp extends Backbone.Router
   routes: 
     '': 'index'
 
