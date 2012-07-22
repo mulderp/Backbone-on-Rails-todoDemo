@@ -7,6 +7,6 @@ class BackboneOnRailsTodo.Routers.TodoLists extends Backbone.Router
     @todos.fetch()
 
   index: ->
-    view = new BackboneOnRailsTodo.Views.TodoListIndex(collection: @todos)
+    view = new BackboneOnRailsTodo.Views.TodoApp({collection: @todos})
     $('#todo-list').html(view.render().el)
 

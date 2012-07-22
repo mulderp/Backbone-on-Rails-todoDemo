@@ -1,4 +1,4 @@
-class BackboneOnRailsTodo.Views.TodoListIndex extends Backbone.View
+class BackboneOnRailsTodo.Views.TodoApp extends Backbone.View
 
   el: $('#todoapp')
 
