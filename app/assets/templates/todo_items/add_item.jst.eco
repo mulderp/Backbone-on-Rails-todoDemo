@@ -1,0 +1,4 @@
+<form id="create-todo" action="/todos" method="POST">
+  <input id="task" placeholder="What needs to be done?" type="text" />
+  <input type="submit" value"submit">
+</div>

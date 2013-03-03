@@ -1,0 +1,6 @@
+<li class="todo">
+  <div class="display">
+    <label class="todo-content"><%= @task %></label>
+    <span class="todo-destroy"></span>
+  </div>
+</li>
